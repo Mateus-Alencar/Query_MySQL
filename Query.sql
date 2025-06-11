@@ -59,6 +59,11 @@ INSERT INTO itens_pedido (pedido_id, produto_id, quantidade, preco_unitario) VAL
 
 SELECT * FROM itens_pedido;
 
+-- Consulta: Selecionar o id dos pedidos e o nome do produto
+SELECT  itens_pedido.id, produtos.nome
+FROM itens_pedido
+JOIN produtos ON itens_pedido.id = produtos.id;
+
 -- Consulta: pedidos com nome do cliente e total por pedido
 SELECT 
     p.id AS pedido_id,
